@@ -179,4 +179,20 @@ export class AppComponent implements OnInit {
         }
       });
   }
+
+  moveUp() {
+    this.direction$.next(Direction.UP)
+  }
+
+  moveLeft() {
+    this.direction$.next(Direction.LEFT)
+  }
+
+  moveRight() {
+    this.direction$.next(Direction.RIGHT)
+  }
+
+  moveDown() {
+    this.direction$.next(Direction.DOWN)
+  }
 }

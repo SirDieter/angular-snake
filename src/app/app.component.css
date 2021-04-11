@@ -1,3 +1,7 @@
 p {
   font-family: Lato;
 }
+
+.movement button {
+  width: 100%;
+}
