@@ -1,5 +1,11 @@
-p {
-  font-family: Lato;
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+app-game-field {
+  flex-grow: 1;
 }
 
 .movement button {
