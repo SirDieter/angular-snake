@@ -2,6 +2,23 @@
 <ng-container *ngIf="game$ | async as game">
   <h2>Points: {{game.snakePos.length - 1}}</h2>
   <h2 *ngIf="game.lost">YOU LOST! <button (click)="newGame()">Retry?</button></h2>
+  <table>
+    <tr>
+      <td></td>
+      <td><button (click)="moveUp()">Up</button></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><button (click)="moveLeft()">Left</button></td>
+      <td></td>
+      <td><button (click)="moveRight()">Right</button></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><button (click)="moveDown()">Down</button></td>
+      <td></td>
+    </tr>
+  </table>
   <app-game-field [width]="game.width" [height]="game.height" [food]="game.food">
     <app-snake [pos]="game.snakePos"></app-snake>
   </app-game-field>
